@@ -25,7 +25,7 @@ void init(void)
 }
 
 void tampil(void){
-
+    double i,j;
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLineWidth(1.0);
     glPushMatrix();
@@ -272,13 +272,135 @@ void tampil(void){
     glVertex3d(130, 30, 75);
     glEnd();
 
+    //kaca lantai 1 (x+3, z+3)
+    glBegin(GL_QUADS);
+    glColor3ub(42, 47, 54);
+    glVertex3d(50, -20, 233);
+    glVertex3d(50, 20, 233);
+    glVertex3d(128, 20, 233);
+    glVertex3d(128, -20, 233);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(42, 47, 54);
+    glVertex3d(50, -20, 233);
+    glVertex3d(50, 20, 233);
+    glVertex3d(50, 20, 230);
+    glVertex3d(50, -20, 230);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(42, 47, 54);
+    glVertex3d(128, -20, 233);
+    glVertex3d(128, 20, 233);
+    glVertex3d(128, 20, 130);
+    glVertex3d(128, -20, 130);
+    glEnd();
+
+    //slab kaca lantai1
+    // kanan
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(129, 20, 233);
+    glVertex3d(125, 20, 233);
+    glVertex3d(125, 20, 130);
+    glVertex3d(129, 20, 130);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(129, 20, 234);
+    glVertex3d(129, 22, 234);
+    glVertex3d(129, 22, 130);
+    glVertex3d(129, 20, 130);
+    glEnd();
+    //frame code diatas
+    glBegin(GL_LINE_LOOP);
+    glColor3ub(0, 0, 0);
+    glVertex3d(129, 20, 234);
+    glVertex3d(129, 22, 234);
+    glVertex3d(129, 22, 130);
+    glVertex3d(129, 20, 130);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(129, 22, 233);
+    glVertex3d(125, 22, 233);
+    glVertex3d(125, 22, 130);
+    glVertex3d(129, 22, 130);
+    glEnd();
+    //segmen kaca samping
+    for (i=130; i<230; i=i+12.5)
+    {
+        glBegin(GL_LINES);
+        glColor3ub(255, 255, 255);
+        glVertex3d(129, 20, i);
+        glVertex3d(129, -20, i);
+        glEnd();
+    }
+    //depan
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(50, 20, 230);
+    glVertex3d(50, 20, 234);
+    glVertex3d(129, 20, 234);
+    glVertex3d(129, 20, 230);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(50, 20, 234);
+    glVertex3d(50, 22, 234);
+    glVertex3d(129, 22, 234);
+    glVertex3d(129, 20, 234);
+    glEnd();
+    //frame code diatas
+    glBegin(GL_LINE_LOOP);
+    glColor3ub(0, 0, 0);
+    glVertex3d(50, 20, 234);
+    glVertex3d(50, 22, 234);
+    glVertex3d(129, 22, 234);
+    glVertex3d(129, 20, 234);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(50, 22, 230);
+    glVertex3d(50, 22, 234);
+    glVertex3d(129, 22, 234);
+    glVertex3d(129, 22, 230);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(230, 250, 255);
+    glVertex3d(50, 22, 230);
+    glVertex3d(50, 20, 230);
+    glVertex3d(50, 20, 234);
+    glVertex3d(50, 22, 234);
+    glEnd();
+    //frame code diatas
+    glBegin(GL_LINE_LOOP);
+    glColor3ub(0, 0, 0);
+    glVertex3d(50, 22, 230);
+    glVertex3d(50, 20, 230);
+    glVertex3d(50, 20, 234);
+    glVertex3d(50, 22, 234);
+    glEnd();
+    for (i=50; i<= 128; i=i+12.5)
+    {
+        if(i==125)
+            i=i+3;
+        glBegin(GL_LINES);
+        glColor3ub(255,255,255);
+        glVertex3f(i, 20, 234);
+        glVertex3f(i, -20, 234);
+        glEnd();
+
+    }
 
 
     glPopMatrix();
-
-
     glutSwapBuffers();
     glFlush();
+    //segmen kaca depan
+
+
 }
 
 void keyboard(unsigned char key, int x, int y) {
