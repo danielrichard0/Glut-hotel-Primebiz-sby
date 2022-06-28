@@ -32,6 +32,156 @@ void tampil(void){
     glPushMatrix();
     glRotatef(xrot, 1.0f, 0.0f, 0.0f);
     glRotatef(yrot, 0.0f, 1.0f, 0.0f);
+    
+    //////// Adit ////////
+    
+     //alas hotel
+    glBegin(GL_QUADS);
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex3d(-40, -25, -90);
+    glVertex3d(-40, -25, 370);
+    glVertex3d(180, -25, 370);
+    glVertex3d(180, -25, -90);
+    glEnd();
+    // tembok batas daerah hotel kiri
+
+    glBegin(GL_QUADS);
+    glColor3ub(126, 143, 140);
+    glVertex3d(-39, -25, 345);
+    glVertex3d(-39, 30, 345);
+    glVertex3d(-39, 30, -65);
+    glVertex3d(-39, -25, -65);
+    glEnd();
+
+     glBegin(GL_QUADS); // line kuning
+    glColor3f(245, 224, 0.0);
+    glVertex3d(-39, -24, -65);
+    glVertex3d(-39, -24, 370);
+    glVertex3d(-36, -24, 370);
+    glVertex3d(-36, -24, -65);
+    glEnd();
+     // tembok belakang
+    glBegin(GL_QUADS);
+    glColor3ub(177, 188, 186);
+    glVertex3d(-40, -25, -65);
+    glVertex3d(-40, 30, -65);
+    glVertex3d(180, 30, -65);
+    glVertex3d(180, -25, -65);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3ub(126, 143, 140);
+    glVertex3d(20, -20, 130);
+    glVertex3d(20, 30, 130);
+    glVertex3d(25, 30, 130);
+    glVertex3d(25, -20, 130);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex3d(20, 30, 230);
+    glVertex3d(20, 30, 130);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex3d(20, 30, 130);
+    glVertex3d(20, -20, 130);
+    glEnd();
+    glBegin(GL_LINES);
+    glColor3ub(0, 0, 0);
+    glVertex3d(20, 30, 130);
+    glVertex3d(25, 30, 130);
+    glEnd();
+    
+    // kotak depan hotel
+    glBegin(GL_QUADS);
+    glColor3ub(177, 188, 186);
+    glVertex3d(30, -25, 345);
+    glVertex3d(30, -10, 345);
+    glVertex3d(112, -10, 345);
+    glVertex3d(112, -25, 345);
+    glEnd();
+     glBegin(GL_QUADS);
+    glColor3ub(177, 188, 186);
+    glVertex3d(30, -25, 340);
+    glVertex3d(30, -10, 340);
+    glVertex3d(112, -10, 340);
+    glVertex3d(112, -25, 340);
+    glEnd();
+     glBegin(GL_QUADS);
+    glColor3ub(177, 188, 186);
+    glVertex3d(30, -25, 345);
+    glVertex3d(30, -10, 345);
+    glVertex3d(30, -10, 340);
+    glVertex3d(30, -25, 340);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(177, 188, 186);
+    glVertex3d(112, -25, 345);
+    glVertex3d(112, -10, 345);
+    glVertex3d(112, -10, 340);
+    glVertex3d(112, -25, 340);
+    glEnd();
+     glBegin(GL_QUADS);
+    glColor3ub(126, 143, 140);
+    glVertex3d(30, -10, 340);
+    glVertex3d(30, -10, 345);
+    glVertex3d(112, -10, 345);
+    glVertex3d(112, -10, 340);
+    glEnd();
+    // garis parkir
+    glBegin(GL_QUADS);// 1
+    glColor3f(245, 224, 0.0);
+    glVertex3d(25, -24, 305);
+    glVertex3d(30, -24, 340);
+    glVertex3d(32, -24, 340);
+    glVertex3d(27, -24, 305);
+    glEnd();
+     glBegin(GL_QUADS);// 2
+    glColor3f(245, 224, 0.0);
+    glVertex3d(45, -24, 305);
+    glVertex3d(50, -24, 340);
+    glVertex3d(52, -24, 340);
+    glVertex3d(47, -24, 305);
+    glEnd();
+
+    glBegin(GL_QUADS);// 3
+    glColor3f(245, 224, 0.0);
+    glVertex3d(65, -24, 305);
+    glVertex3d(70, -24, 340);
+    glVertex3d(72, -24, 340);
+    glVertex3d(67, -24, 305);
+    glEnd();
+    glBegin(GL_QUADS);// 4
+    glColor3f(245, 224, 0.0);
+    glVertex3d(85, -24, 305);
+    glVertex3d(90, -24, 340);
+    glVertex3d(92, -24, 340);
+    glVertex3d(87, -24, 305);
+    glEnd();
+    glBegin(GL_QUADS);// 5
+    glColor3f(245, 224, 0.0);
+    glVertex3d(105, -24, 305);
+    glVertex3d(110, -24, 340);
+    glVertex3d(112, -24, 340);
+    glVertex3d(107, -24, 305);
+    glEnd();
+     glBegin(GL_QUADS); // line kuning
+    glColor3f(245, 224, 0.0);
+    glVertex3d(29, -24, 345);
+    glVertex3d(29, -24, 370);
+    glVertex3d(30, -24, 370);
+    glVertex3d(30, -24, 345);
+    glEnd();
+    glBegin(GL_QUADS); // line kuning
+    glColor3f(245, 224, 0.0);
+    glVertex3d(112, -24, 345);
+    glVertex3d(112, -24, 370);
+    glVertex3d(113, -24, 370);
+    glVertex3d(113, -24, 345);
+    glEnd();
+    
+    ///// Daniel ///// 
+   
     //alas hotel
     glBegin(GL_QUADS);
     glColor3f(1.0, 0.0, 0.0);
@@ -2105,3 +2255,4 @@ int main(int argc, char *argv[])
     glutMainLoop();
     return 0;
 }
+  
